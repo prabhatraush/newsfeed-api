@@ -96,7 +96,7 @@ router.get('/entertainment', async(req, res) =>{
 
 router.get('/careers', async(req, res) =>{
     const biharStories = [];
-    const feed = await parser.parseURL('hhttps://hindi.news18.com/rss/khabar/sports/cricket.xml');
+    const feed = await parser.parseURL('https://hindi.news18.com/rss/khabar/career/career-career.xml');
     if(!feed) {
         res.status(400).send({message:"Invalid Url"});
     }
