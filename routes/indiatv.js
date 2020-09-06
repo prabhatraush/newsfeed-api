@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Parser = require('rss-parser');
 
-const getImage = require('../utils');
+const {getImage} = require('../utils');
 
 const parser = new Parser();
 
