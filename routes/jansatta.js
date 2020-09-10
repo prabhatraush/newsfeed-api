@@ -46,7 +46,7 @@ router.get('/nation', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item);
+        //console.log(item);
         if(!item.thumbnail['$'].url)
             item.imageUrl = "custom-url";    
         else
