@@ -9,7 +9,8 @@ router.get('/', (req, res) =>{
 
 router.get('/livescore', async(req, res) =>{
 
-    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches');
+    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
+    .catch(error => { throw error});
     if(!response) {
         res.send({message:"Invalid Url"});
     }
@@ -23,7 +24,8 @@ router.get('/livescore', async(req, res) =>{
 router.get('/commentary/:mid', async(req, res) =>{
 
     const mid = req.params.mid;
-    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/commentary');
+    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/commentary')
+    .catch(error => { throw error});
     if(!response) {
         res.send({message:"Invalid Url"});
     }
@@ -36,7 +38,8 @@ router.get('/commentary/:mid', async(req, res) =>{
 router.get('/scorecard/:mid', async(req, res) =>{
 
     const mid = req.params.mid;
-    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/scorecard');
+    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/scorecard')
+    .catch(error => { throw error});
     if(!response) {
         res.send({message:"Invalid Url"});
     }
@@ -49,7 +52,8 @@ router.get('/scorecard/:mid', async(req, res) =>{
 router.get('/highlights/:mid', async(req, res) =>{
 
     const mid = req.params.mid;
-    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/highlights');
+    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/'+mid+'/highlights')
+    .catch(error => { throw error});
     if(!response) {
         res.send({message:"Invalid Url"});
     }

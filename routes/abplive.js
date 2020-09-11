@@ -21,7 +21,7 @@ router.get('/breaking', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item.thumbnail['$'].url);
+        //console.log(item.thumbnail['$'].url);
         item.imageUrl = item.thumbnail['$'].url;
         Stories.push(item);
     });
@@ -43,7 +43,7 @@ router.get('/nation', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item.thumbnail['$'].url);
+        //console.log(item.thumbnail['$'].url);
         item.imageUrl = item.thumbnail['$'].url;
         Stories.push(item);
     });
@@ -65,7 +65,7 @@ router.get('/international', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item.thumbnail['$'].url);
+        //console.log(item.thumbnail['$'].url);
         item.imageUrl = item.thumbnail['$'].url;
         Stories.push(item);
     });
@@ -87,7 +87,7 @@ router.get('/sports', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item.thumbnail['$'].url);
+        //console.log(item.thumbnail['$'].url);
         item.imageUrl = item.thumbnail['$'].url;
         Stories.push(item);
     });
@@ -109,7 +109,7 @@ router.get('/entertainment', async(req, res) =>{
     console.log(feed.items.length);
 
     feed.items.forEach(item => {
-        console.log(item.thumbnail['$'].url);
+        //console.log(item.thumbnail['$'].url);
         item.imageUrl = item.thumbnail['$'].url;
         Stories.push(item);
     });
