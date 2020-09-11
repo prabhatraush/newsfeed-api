@@ -5,6 +5,7 @@ const indiatv = require('./routes/indiatv');
 const news18 = require('./routes/news18');
 const jansatta = require('./routes/jansatta');
 const abplive = require('./routes/abplive');
+const livescore = require('./routes/livescore');
 
 const app = express();
 
@@ -12,7 +13,8 @@ const app = express();
  .use('/indiatv',indiatv)
  .use('/news18',news18)
  .use('/jansatta',jansatta)
- .use('/abplive',abplive);
+ .use('/abplive',abplive)
+ .use('/cric',livescore);
 
  app.get('/',(req, res)=>{
      res.send({
@@ -44,6 +46,12 @@ const app = express();
             "sports-news": "/jansatta/sports",
             "entertaiment-news":"/jansatta/entertainment"
         }],
+        "cric": [{
+            "live-score":"/cric/livescore",
+            "nation-news":"/cric/commentary/:mid",
+            "international-news":"/cric/scorecard/:mid",
+            "sports-news": "/cric/highlights/:mid"
+        }]
 
 
      })

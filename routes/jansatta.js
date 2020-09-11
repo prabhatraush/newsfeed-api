@@ -50,7 +50,7 @@ router.get('/nation', async(req, res) =>{
         if(!item.thumbnail['$'].url)
             item.imageUrl = "custom-url";    
         else
-            item.imageUrl = item.thumbnail['$'].url;    
+            item.imageUrl = null || item.thumbnail['$'].url;    
         
         Stories.push(item);
     });
