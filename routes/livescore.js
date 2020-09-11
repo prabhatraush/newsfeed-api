@@ -9,22 +9,22 @@ router.get('/', (req, res) =>{
 
 router.get('/livescore', async(req, res, next) =>{
 
-    // const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
-    // .catch(error => { throw error});
-    // if(!response) {
-    //     res.send({message:"Invalid Url"});
-    // }
-    // //console.log(response.data);
-    // res.status(200).send({
-        
-    // })
-
-    try {
-        let response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
-        res.send({data: response.data})
-    } catch (err) {
-        next(err);
+    const response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
+    .catch(error => { throw error});
+    if(!response) {
+        res.send({message:"Invalid Url"});
     }
+    //console.log(response.data);
+    res.status(200).jsonp({
+        data: response.data
+    })
+
+    // try {
+    //     let response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
+    //     res.send({data: response.data})
+    // } catch (err) {
+    //     next(err);
+    // }
 
 });
 
