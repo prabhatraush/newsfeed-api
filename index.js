@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 
 const indiatv = require('./routes/indiatv');
 const news18 = require('./routes/news18');

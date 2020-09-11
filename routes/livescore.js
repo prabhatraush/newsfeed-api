@@ -20,7 +20,7 @@ router.get('/livescore', async(req, res, next) =>{
     // })
 
     try {
-        let response = await axios.get('https://mapps.ricbuzz.com/cbzios/match/livematches')
+        let response = await axios.get('https://mapps.cricbuzz.com/cbzios/match/livematches')
         res.send({data: response.data})
     } catch (err) {
         next(err);
